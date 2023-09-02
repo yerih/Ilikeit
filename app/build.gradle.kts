@@ -43,7 +43,8 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
-        compose = true
+//        compose = true
+        dataBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.2.0"
@@ -58,7 +59,7 @@ android {
 dependencies {
 
     implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
     implementation("androidx.activity:activity-compose:1.3.1")
     implementation("androidx.compose.ui:ui:1.2.0")
     implementation("androidx.compose.ui:ui-tooling-preview:1.2.0")
@@ -77,4 +78,9 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.42")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+
+
+    //Navigation component
+    implementation("androidx.navigation:navigation-fragment-ktx:2.4.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.4.1")
 }
