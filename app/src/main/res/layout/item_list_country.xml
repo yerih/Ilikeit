@@ -24,14 +24,25 @@
             android:orientation="horizontal"
             android:padding="10dp">
 
-            <ImageView
+<!--            <ImageView-->
+<!--                android:id="@+id/icon"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/abc_vector_test"-->
+<!--                android:backgroundTint="@color/black"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                tools:src="@tools:sample/avatars"/>-->
+            <TextView
                 android:id="@+id/icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/abc_vector_test"
-                android:backgroundTint="@color/black"
+                android:text="@{country.emoji}"
+                android:textSize="34sp"
+                android:gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:src="@tools:sample/avatars"/>
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="🇦🇱"/>
 
             <LinearLayout
                 android:layout_width="0dp"

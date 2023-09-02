@@ -17,7 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainFragment : Fragment(R.layout.fragment_main) {
 
     private val viewModel: MainViewModel by viewModels()
-    private val adapter = CountriesAdapter{ country -> log("$country")}
+    private val adapter = CountriesAdapter{ }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentMainBinding.bind(view).apply { recycler.adapter = adapter }
