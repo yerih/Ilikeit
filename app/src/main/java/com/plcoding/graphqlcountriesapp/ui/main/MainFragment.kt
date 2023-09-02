@@ -6,6 +6,8 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import com.plcoding.graphqlcountriesapp.launchAndCollect
 import com.plcoding.graphqlcountriesapp.log
+import com.plcoding.graphqlcountriesapp.toast
+import com.plcoding.graphqlcountriesapp.ui.main.MainViewModel.UiEvent.*
 import com.plcoding.graphqlcountriesapp.ui.main.adapters.CountriesAdapter
 import com.plcoding.graphqlprep.R
 import com.plcoding.graphqlprep.databinding.FragmentMainBinding
@@ -21,6 +23,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         val binding = FragmentMainBinding.bind(view).apply { recycler.adapter = adapter }
         launchAndCollect(viewModel.state){
             binding.countries = it.list
+        }
+        launchAndCollect(viewModel.events){ event ->
+            when(event){
+                is ToastEvent -> toast("error: ${event.msg}")
+            }
         }
     }
 
