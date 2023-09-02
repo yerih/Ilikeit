@@ -15,7 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
-        app:contentPadding="5dp"
         app:cardCornerRadius="16dp">
 
         <LinearLayout
@@ -23,7 +22,7 @@
             android:layout_height="wrap_content"
             android:foreground="?attr/selectableItemBackground"
             android:orientation="horizontal"
-            android:padding="5dp">
+            android:padding="10dp">
 
             <ImageView
                 android:layout_width="wrap_content"
