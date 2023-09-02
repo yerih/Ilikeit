@@ -1,16 +1,16 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-//    id("com.apollographql.apollo3").version("3.7.3")
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
+    id("com.apollographql.apollo3").version("3.7.3")
 }
 
-//apollo {
-//    service("service") {
-//        packageName.set("com.plcoding")
-//    }
-//}
+apollo {
+    service("service") {
+        packageName.set("com.plcoding")
+    }
+}
 
 android {
     namespace = "com.plcoding.graphqlprep"
@@ -71,7 +71,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling:1.2.0")
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.2.0")
 
-//    implementation("com.apollographql.apollo3:apollo-runtime:3.7.3")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
 
     implementation("com.google.dagger:hilt-android:2.42")
@@ -83,4 +82,7 @@ dependencies {
     //Navigation component
     implementation("androidx.navigation:navigation-fragment-ktx:2.4.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.4.1")
+
+    //Apollo
+    implementation("com.apollographql.apollo3:apollo-runtime:3.7.3")
 }
