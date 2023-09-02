@@ -11,7 +11,7 @@ import com.plcoding.graphqlprep.R
 import com.plcoding.graphqlprep.databinding.ItemListCountryBinding
 
 class CountriesAdapter(
-
+    private val listener: (Country) -> Unit
 ): ListAdapter<Country, CountriesAdapter.ViewHolder>(
     basicDiffUtil { old, new -> old.name == new.name }) {
 
@@ -26,7 +26,7 @@ class CountriesAdapter(
         val country = getItem(position)
         holder.apply {
             bind(country);
-            itemView.setOnClickListener {  }
+            itemView.setOnClickListener { listener(country) }
         }
     }
 }
